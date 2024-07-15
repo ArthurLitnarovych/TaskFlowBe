@@ -121,7 +121,7 @@ export class UserController {
 
 		const emailText = `Greetings ${user.name}!
 		Please follow the given link to change your password:
-		\n${process.env.CLIENT_URL}/changePassword/${token}
+		\n${process.env.SERVER_URL}/changePassword/${token}
 		\nThanks`;
 
 		verifyEmail(email, emailText, subject);
