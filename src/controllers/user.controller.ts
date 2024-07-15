@@ -31,7 +31,7 @@ export class UserController {
 
 		const emailText = `Greetings ${name}! You have recently visited our website and entered your email.
 		Please follow the given link to verify your email:
-		\n${process.env.SERVER_URL}:${process.env.SERVER_PORT}/api/user/verifyEmail/${token}
+		\n${process.env.SERVER_URL}/api/user/verifyEmail/${token}
 		\nThanks`;
 
 		verifyEmail(email, emailText, subject);
