@@ -29,7 +29,7 @@ app.get('/', (req: Request, res: Response) => {
 router.init();
 
 try {
-	app.listen(port, async () => {
+	server.listen(port, async () => {
 		try {
 			console.log(`Now listening on port ${port}`);
 		} catch (error) {
@@ -37,7 +37,7 @@ try {
 		}
 	});
 
-	server.listen(socketPort, async () => {
+	server.listen(port, async () => {
 		try {
 			console.log(`Socket now listening on port ${socketPort}`);
 		} catch (error) {
