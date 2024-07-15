@@ -36,14 +36,6 @@ try {
 			console.error(error);
 		}
 	});
-
-	server.listen(port, async () => {
-		try {
-			console.log(`Socket now listening on port ${socketPort}`);
-		} catch (error) {
-			console.error(error);
-		}
-	});
 } catch (error) {
 	console.log(error);
 }
