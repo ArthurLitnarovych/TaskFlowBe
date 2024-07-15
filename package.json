@@ -2,8 +2,7 @@
 	"name": "cgs-backend",
 	"version": "1.0.0",
 	"scripts": {
-		"build": "rimraf build && npx tsc && tsc-alias -p tsconfig.json",
-		"prestart": "prisma generate && prisma migrate deploy && npm run build",
+		"build": "prisma generate && prisma migrate deploy && rimraf build && npx tsc && tsc-alias -p tsconfig.json",
 		"start": "node dist/app.js",
 		"preserve": "npm run build",
 		"serve": "concurrently \"tsc -w\" \"tsc-alias -w\" \"nodemon dist/app.js\" ",
